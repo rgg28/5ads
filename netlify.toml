@@ -1,0 +1,12 @@
+[build]
+  publish = "." # El directorio de tu frontend estático
+  command = ""  # No hay comando de build para HTML plano
+
+[functions]
+  directory = "functions" # La carpeta donde están tus Netlify Functions
+  # node_bundler = "esbuild" # Opcional: puede acelerar el build
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

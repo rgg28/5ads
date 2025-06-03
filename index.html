@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gana Recompensas Viendo Anuncios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>App de Recompensas por Anuncios</h1>
+    </header>
+
+    <div class="page-container"> <aside class="left-banner">
+            <div class="ad-placeholder">Anuncio Lateral Izquierdo</div>
+            </aside>
+
+        <main>
+            <section id="loginSection">
+                <h2>Inicio de Sesión / Registro</h2>
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Contraseña">
+                <button id="loginBtn">Iniciar Sesión</button>
+                <button id="registerBtn">Registrarse</button>
+            </section>
+
+            <section id="appSection" style="display: none;">
+                <h2>Bienvenido, <span id="userEmailDisplay"></span></h2>
+
+                <div class="profile-section">
+                    <h3>Tu Perfil y Balance</h3>
+                    <p>Balance actual: <span id="userBalanceDisplay">$0.00</span></p>
+                    <p>Anuncios vistos para la próxima recompensa: <span id="adsWatchedDisplay">0 anuncios vistos</span></p>
+                    <p>Mínimo para canjear: <span id="minRedeemAmountDisplay">$0.50</span></p>
+
+                    <div class="paypal-section">
+                        <h4>Email de PayPal para canjes:</h4>
+                        <input type="email" id="paypalEmailInput" placeholder="tu.email@ejemplo.com">
+                        <button id="updatePaypalBtn">Actualizar Email PayPal</button>
+                    </div>
+                </div>
+
+                <div class="ad-section">
+                    <h3>Ver Anuncios y Ganar</h3>
+                    <p id="adContainer">Listo para ver un anuncio.</p>
+                    <button id="viewAdBtn">Ver Anuncio Recompensado</button>
+                </div>
+
+                <div class="redeem-section">
+                    <h3>Canjear Recompensas</h3>
+                    <button id="redeemBtn" disabled>Solicitar Canje</button>
+                    <p class="redeem-info">Se requiere al menos <span id="minRedeemAmountInfo">$0.50</span> para canjear.</p>
+                </div>
+
+                <button id="logoutBtn">Cerrar Sesión</button>
+            </section>
+        </main>
+
+        <aside class="right-banner">
+            <div class="ad-placeholder">Anuncio Lateral Derecho</div>
+            </aside>
+    </div> <footer>
+        <p>&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
